@@ -38,6 +38,9 @@ ifneq ($(EPICS_LIBCOM_ONLY),YES)
   DIRS += testGpibSerialApp
   testGpibSerialApp_DEPEND_DIRS = testApp testGpibApp
   iocBoot_DEPEND_DIRS += testGpibSerialApp
+  DIRS += testMaskShiftApp
+  testMaskShiftApp_DEPEND_DIRS = asyn
+  iocBoot_DEPEND_DIRS += testMaskShiftApp
   ifdef SNCSEQ
     DIRS += testIPServerApp
     testIPServerApp_DEPEND_DIRS = asyn

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-10-17 17:10:28 by tford-->
+<display version="2.0.0">
+  <name>testMaskShift</name>
+  <macros>
+    <P>testSM:</P>
+    <R>1:</R>
+  </macros>
+  <width>1400</width>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>Test asynMaskShift Functionality</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <M>TestLong</M>
+      <NOTE>- with asyn:READBACK==0</NOTE>
+    </macros>
+    <file>_testMaskShiftLong.bob</file>
+    <y>50</y>
+    <width>1740</width>
+    <height>380</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_1</name>
+    <macros>
+      <M>TestLongCallback</M>
+      <NOTE>- using asyn:READBACK==1</NOTE>
+    </macros>
+    <file>_testMaskShiftLong.bob</file>
+    <y>440</y>
+    <width>1740</width>
+    <height>380</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_2</name>
+    <macros>
+      <M>TestBool</M>
+      <NOTE>- with asyn:READBACK==0</NOTE>
+    </macros>
+    <file>_testMaskShiftBool.bob</file>
+    <y>820</y>
+    <width>1740</width>
+    <height>460</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_3</name>
+    <macros>
+      <M>TestBoolCallback</M>
+      <NOTE>- using asyn:READBACK==1</NOTE>
+    </macros>
+    <file>_testMaskShiftBool.bob</file>
+    <y>1290</y>
+    <width>1740</width>
+    <height>460</height>
+    <resize>2</resize>
+  </widget>
+</display>

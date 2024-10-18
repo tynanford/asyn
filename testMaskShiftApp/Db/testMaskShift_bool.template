@@ -1,0 +1,124 @@
+record (longin,"$(P)$(R)$(M)_RBV") {
+	field(DESC, "Test longin")
+	field(SCAN, "I/O Intr")
+	field(DTYP, "asynUInt32Digital")
+	field(INP, "@asynMask($(PORT),$(ADDR),0xFFFFFFFF,$(TIMEOUT))$(A)_RBV")
+}
+record (longout,"$(P)$(R)$(M)") {
+	field(DESC, "Test longout")
+	field(DTYP, "asynUInt32Digital")
+	field(OUT, "@asynMask($(PORT),$(ADDR),0xFFFFFFFF,$(TIMEOUT))$(A)")
+    info(asyn:READBACK,"$(ASYN_READBACK)")
+}
+record (bi,"$(P)$(R)$(M)1_RBV") {
+	field(DESC, "Test bi")
+	field(SCAN, "I/O Intr")
+	field(DTYP, "asynUInt32Digital")
+	field(INP, "@asynMask($(PORT),$(ADDR),0x00000001,$(TIMEOUT))$(A)_RBV")
+}
+record (bo,"$(P)$(R)$(M)1") {
+	field(DESC, "Test bo")
+	field(DTYP, "asynUInt32Digital")
+	field(OUT, "@asynMask($(PORT),$(ADDR),0x00000001,$(TIMEOUT))$(A)")
+    info(asyn:READBACK,"$(ASYN_READBACK)")
+}
+record (bi,"$(P)$(R)$(M)2_RBV") {
+	field(DESC, "Test bi")
+	field(SCAN, "I/O Intr")
+	field(DTYP, "asynUInt32Digital")
+	field(INP, "@asynMask($(PORT),$(ADDR),0x00000002,$(TIMEOUT))$(A)_RBV")
+}
+record (bo,"$(P)$(R)$(M)2") {
+	field(DESC, "Test bo")
+	field(DTYP, "asynUInt32Digital")
+	field(OUT, "@asynMask($(PORT),$(ADDR),0x00000002,$(TIMEOUT))$(A)")
+    info(asyn:READBACK,"$(ASYN_READBACK)")
+}
+record (bi,"$(P)$(R)$(M)3_RBV") {
+	field(DESC, "Test bi")
+	field(SCAN, "I/O Intr")
+	field(DTYP, "asynUInt32Digital")
+	field(INP, "@asynMask($(PORT),$(ADDR),0x00000004,$(TIMEOUT))$(A)_RBV")
+}
+record (bo,"$(P)$(R)$(M)3") {
+	field(DESC, "Test bo")
+	field(DTYP, "asynUInt32Digital")
+	field(OUT, "@asynMask($(PORT),$(ADDR),0x00000004,$(TIMEOUT))$(A)")
+    info(asyn:READBACK,"$(ASYN_READBACK)")
+}
+record (bi,"$(P)$(R)$(M)32_RBV") {
+	field(DESC, "Test bi")
+	field(SCAN, "I/O Intr")
+	field(DTYP, "asynUInt32Digital")
+	field(INP, "@asynMask($(PORT),$(ADDR),0x80000000,$(TIMEOUT))$(A)_RBV")
+}
+record (bo,"$(P)$(R)$(M)32") {
+	field(DESC, "Test bo")
+	field(DTYP, "asynUInt32Digital")
+	field(OUT, "@asynMask($(PORT),$(ADDR),0x80000000,$(TIMEOUT))$(A)")
+    info(asyn:READBACK,"$(ASYN_READBACK)")
+}
+
+
+
+
+record (longin,"$(P)$(R)$(M)Shift_RBV") {
+	field(DESC, "Test longin")
+	field(SCAN, "I/O Intr")
+	field(DTYP, "asynUInt32Digital")
+	field(INP, "@asynMaskShift($(PORT),$(ADDR),0xFFFFFFFF,0x0,$(TIMEOUT))$(A)_SHIFT_RBV")
+}
+record (longout,"$(P)$(R)$(M)Shift") {
+	field(DESC, "Test longout")
+	field(DTYP, "asynUInt32Digital")
+	field(OUT, "@asynMaskShift($(PORT),$(ADDR),0xFFFFFFFF,0x0,$(TIMEOUT))$(A)_SHIFT")
+    info(asyn:READBACK,"$(ASYN_READBACK)")
+}
+record (bi,"$(P)$(R)$(M)Shift1_RBV") {
+	field(DESC, "Test bi")
+	field(SCAN, "I/O Intr")
+	field(DTYP, "asynUInt32Digital")
+	field(INP, "@asynMaskShift($(PORT),$(ADDR),0x00000001,0x0,$(TIMEOUT))$(A)_SHIFT_RBV")
+}
+record (bo,"$(P)$(R)$(M)Shift1") {
+	field(DESC, "Test bo")
+	field(DTYP, "asynUInt32Digital")
+	field(OUT, "@asynMaskShift($(PORT),$(ADDR),0x00000001,0x0,$(TIMEOUT))$(A)_SHIFT")
+    info(asyn:READBACK,"$(ASYN_READBACK)")
+}
+record (bi,"$(P)$(R)$(M)Shift2_RBV") {
+	field(DESC, "Test bi")
+	field(SCAN, "I/O Intr")
+	field(DTYP, "asynUInt32Digital")
+	field(INP, "@asynMaskShift($(PORT),$(ADDR),0x00000002,0x1,$(TIMEOUT))$(A)_SHIFT_RBV")
+}
+record (bo,"$(P)$(R)$(M)Shift2") {
+	field(DESC, "Test bo")
+	field(DTYP, "asynUInt32Digital")
+	field(OUT, "@asynMaskShift($(PORT),$(ADDR),0x00000002,0x1,$(TIMEOUT))$(A)_SHIFT")
+    info(asyn:READBACK,"$(ASYN_READBACK)")
+}
+record (bi,"$(P)$(R)$(M)Shift3_RBV") {
+	field(DESC, "Test bi")
+	field(SCAN, "I/O Intr")
+	field(DTYP, "asynUInt32Digital")
+	field(INP, "@asynMaskShift($(PORT),$(ADDR),0x00000004,2,$(TIMEOUT))$(A)_SHIFT_RBV")
+}
+record (bo,"$(P)$(R)$(M)Shift3") {
+	field(DESC, "Test bo")
+	field(DTYP, "asynUInt32Digital")
+	field(OUT, "@asynMaskShift($(PORT),$(ADDR),0x00000004,2,$(TIMEOUT))$(A)_SHIFT")
+    info(asyn:READBACK,"$(ASYN_READBACK)")
+}
+record (bi,"$(P)$(R)$(M)Shift32_RBV") {
+	field(DESC, "Test bi")
+	field(SCAN, "I/O Intr")
+	field(DTYP, "asynUInt32Digital")
+	field(INP, "@asynMaskShift($(PORT),$(ADDR),0x80000000,31,$(TIMEOUT))$(A)_SHIFT_RBV")
+}
+record (bo,"$(P)$(R)$(M)Shift32") {
+	field(DESC, "Test bo")
+	field(DTYP, "asynUInt32Digital")
+	field(OUT, "@asynMaskShift($(PORT),$(ADDR),0x80000000,31,$(TIMEOUT))$(A)_SHIFT")
+    info(asyn:READBACK,"$(ASYN_READBACK)")
+}

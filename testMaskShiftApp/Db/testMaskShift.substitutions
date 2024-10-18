@@ -1,0 +1,11 @@
+file "testMaskShift_long.template" {
+  pattern { P,     R,    M                      A,                      ASYN_READBACK }
+  { "\$(P)", "\$(R)",   "TestLong",             "TEST_LONG",            "0" }
+  { "\$(P)", "\$(R)",   "TestLongCallback",     "TEST_CALLBACK_LONG",   "1" }
+}
+
+file "testMaskShift_bool.template" {
+  pattern { P,     R,    M                      A,                      ASYN_READBACK }
+  { "\$(P)", "\$(R)",   "TestBool",             "TEST_BOOL",            "0" }
+  { "\$(P)", "\$(R)",   "TestBoolCallback",     "TEST_CALLBACK_BOOL",   "1" }
+}

@@ -26,6 +26,8 @@ typedef struct asynEpicsUtils {
                 char **port, int *addr, char **userParam);
     asynStatus (*parseLinkMask)(asynUser *pasynUser, DBLINK *plink,
                 char **port, int *addr, epicsUInt32 *mask,char **userParam);
+    asynStatus (*parseLinkMaskShift)(asynUser *pasynUser, DBLINK *plink,
+                char **port, int *addr, epicsUInt32 *mask, epicsUInt32 *shift, char **userParam);
     asynStatus (*parseLinkFree)(asynUser *pasynUser,
                 char **port, char **userParam);
     void       (*asynStatusToEpicsAlarm)(asynStatus status,

@@ -28,6 +28,8 @@ static asynStatus parseLink(asynUser *pasynUser, DBLINK *plink,
                    char **port, int *addr, char **userParam);
 static asynStatus parseLinkMask(asynUser *pasynUser, DBLINK *plink,
                    char **port, int *addr, epicsUInt32 *mask,char **userParam);
+static asynStatus parseLinkMaskShift(asynUser *pasynUser, DBLINK *plink,
+                   char **port, int *addr, epicsUInt32 *mask, epicsUInt32 *shift, char **userParam);
 static asynStatus parseLinkFree(asynUser *pasynUser,
                    char **port, char **userParam);
 static void asynStatusToEpicsAlarm(asynStatus status,
@@ -35,7 +37,7 @@ static void asynStatusToEpicsAlarm(asynStatus status,
                                    epicsAlarmSeverity defaultSevr, epicsAlarmSeverity *pSevr);
 
 static asynEpicsUtils utils = {
-    parseLink,parseLinkMask,parseLinkFree,asynStatusToEpicsAlarm
+    parseLink,parseLinkMask,parseLinkMaskShift,parseLinkFree,asynStatusToEpicsAlarm
 };
 
 asynEpicsUtils *pasynEpicsUtils = &utils;
@@ -44,6 +46,7 @@ asynEpicsUtils *pasynEpicsUtils = &utils;
    VME_IO "C<ignore> S<addr> @<portName> userParams
    INST_IO @asyn(<portName>ws<addr>ws<timeout>)userParams
    INST_IO @asynMask(<portName>ws<addr>ws<mask>ws<timeout>)userParams
+   INST_IO @asynMaskShift(<portName>ws<addr>ws<mask>ws<shift>ws<timeout>)userParams
 */
 
 static char *skipWhite(char *pstart,int commaOk){
@@ -220,6 +223,86 @@ userParams:
 error:
         epicsSnprintf(pasynUser->errorMessage,pasynUser->errorMessageSize,
             "invalid INST_IO Must be asynMask(<port> <addr> <mask> <timeout>)userParams");
+        return(asynError);
+}
+
+static asynStatus parseLinkMaskShift(asynUser *pasynUser, DBLINK *plink,
+                   char **port, int *addr, epicsUInt32 *mask, epicsUInt32 *shift, char **userParam)
+{
+    struct instio *pinstio;
+    size_t len;
+    char *p;
+    char *endp;
+    char *pnext;
+
+    assert(addr && port && userParam);
+    *addr=0; *port=NULL; *userParam=NULL;
+    if(plink->type!=INST_IO) {
+        epicsSnprintf(pasynUser->errorMessage,pasynUser->errorMessageSize,
+                     "Link must be INST_IO");
+        return(asynError);
+    }
+    pinstio=(struct instio*)&(plink->value);
+    p = pinstio->string;
+    pnext = strstr(p,"asynMaskShift(");
+    if(!pnext) goto error;
+    pnext+=14; // skip over asynMaskShift(
+    pnext = skipWhite(pnext,0);
+    p = pnext;
+    for(len=0; *p && !isspace((int)*p) && (*p!=',') && (*p!=')')  ; len++, p++){}
+    if(*p==0) goto error;
+    *port = mallocMustSucceed(len+1,"asynEpicsUtils:parseLink");
+    (*port)[len] = 0;
+    strncpy(*port,pnext,len);
+    /*next is addr*/
+    pnext = p;
+    pnext = skipWhite(pnext,1);
+    if(*pnext==0 || *pnext==')') goto error;
+    errno = 0;
+    *addr = strtol(pnext,&endp,0);
+    if(errno) goto error;
+    /*next is mask*/
+    pnext = endp;
+    pnext = skipWhite(pnext,1);
+    if(*pnext==0 || *pnext==')') goto error;
+    errno = 0;
+    *mask = strtoul(pnext,&endp,0);
+    if(errno) goto error;
+    /*next is shift*/
+    pnext = endp;
+    pnext = skipWhite(pnext,1);
+    if(*pnext==0 || *pnext==')') goto error;
+    errno = 0;
+    *shift = strtoul(pnext,&endp,0);
+    if(errno) goto error;
+    /*next is timeout*/
+    pnext = endp;
+    pnext = skipWhite(pnext,1);
+    if(*pnext==0) goto error;
+    if(*pnext==')') {
+        pasynUser->timeout = 1.0;
+        goto userParams;
+    }
+    errno = 0;
+    pasynUser->timeout = strtod(pnext,&endp);
+    if(errno) goto error;
+    pnext = endp;
+    pnext = skipWhite(pnext,0);
+    if(*pnext!=')') goto error;
+userParams:
+    if(userParam) *userParam = 0; /*initialize to null string*/
+    pnext++; /*skip over )*/
+    p = pnext;
+    if(*p) {
+        p = skipWhite(p,0);
+        if(userParam&& *p) {
+          *userParam = epicsStrDup(p);
+        }
+    }
+    return(asynSuccess);
+error:
+        epicsSnprintf(pasynUser->errorMessage,pasynUser->errorMessageSize,
+            "invalid INST_IO Must be asynMaskShift(<port> <addr> <mask> <shift> <timeout>)userParams");
         return(asynError);
 }
 

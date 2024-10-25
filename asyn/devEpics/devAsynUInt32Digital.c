@@ -800,9 +800,6 @@ static long processLi(longinRecord *pr)
     recGblSetSevr(pr, pPvt->result.alarmStatus, pPvt->result.alarmSeverity);
     if(pPvt->result.status==asynSuccess) {
         pr->val = (pPvt->result.value & pPvt->mask) >> pPvt->shift;
-        printf("%s:%s:%d For result.value=%08X and mask=%08X and shift=%08X\n",
-               __FILE__, __func__, __LINE__, pPvt->result.value,pPvt->mask,pPvt->shift);
-        printf("%s:%s:%d And pr->val=%d\n",__FILE__, __func__, __LINE__, pr->val);
         pr->udf=0;
         return 0;
     }
@@ -824,23 +821,10 @@ static long initLo(longoutRecord *pr)
     if (status != INIT_OK) return status;
     pPvt = pr->dpvt;
 
-    /* Parse nshift if it was specified */
-    int nshift = (int)pPvt->shift;
-    if (nshift) {
-        printf("%s %s::initLo  %s\n",
-               pr->name, driverName, "nshift not yet implemented");
-        printf("%s %d\n", "Shift = ", nshift);
-        /*
-        pPvt->mask = 0xffffffff << nshift;
-        pPvt->deviceLow = 0;
-        pPvt->deviceHigh = pPvt->mask;
-        */
-    }
     /* Read the current value from the device */
     status = pasynUInt32DigitalSyncIO->read(pPvt->pasynUserSync,
                       &value, pPvt->mask,pPvt->pasynUser->timeout);
     if (status == asynSuccess) {
-        printf("After read for pasynUInt32DigitialSyncIO for value = %08X\n", value);
         pr->val = value;
         pr->udf = 0;
     }
@@ -857,15 +841,9 @@ static long processLo(longoutRecord *pr)
         /* We got a callback from the driver */
         if (pPvt->result.status == asynSuccess) {
             pr->val = (pPvt->result.value & pPvt->mask) >> pPvt->shift;
-            printf("%s:%s:%d For result.value=%08X and mask=%08X and shift=%08X\n",
-                   __FILE__, __func__, __LINE__, pPvt->result.value,pPvt->mask,pPvt->shift);
-            printf("%s:%s:%d And pr->val=%d\n",__FILE__, __func__, __LINE__, pr->val);
         }
     } else if(pr->pact == 0) {
         pPvt->result.value = (pr->val << pPvt->shift) & pPvt->mask;
-        printf("%s:%s:%d For pr->val=%08X and mask=%08X and shift=%08X\n",
-               __FILE__, __func__, __LINE__, pr->val,pPvt->mask,pPvt->shift);
-        printf("%s:%s:%d And pPvt->result.value=%d\n",__FILE__, __func__, __LINE__, pPvt->result.value);
         if(pPvt->canBlock) {
             pr->pact = 1;
             pPvt->asyncProcessingActive = 1;

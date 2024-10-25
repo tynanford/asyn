@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-10-24 18:07:40 by tford-->
+<!--Saved on 2024-10-24 18:08:26 by tford-->
 <display version="2.0.0">
   <name>_testMaskShift</name>
-  <width>1440</width>
+  <width>750</width>
   <height>380</height>
   <widget type="group" version="3.0.0">
     <name>asynMask Test  $(NOTE)</name>
-    <width>670</width>
+    <width>750</width>
     <height>380</height>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -380,6 +380,150 @@
       <wrap_words use_class="true">true</wrap_words>
     </widget>
     <widget type="label" version="2.0.0">
+      <name>Label_22</name>
+      <class>COMMENT</class>
+      <text>shift == 0</text>
+      <x>642</x>
+      <y>82</y>
+      <width>70</width>
+      <font use_class="true">
+        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
+        </font>
+      </font>
+      <foreground_color use_class="true">
+        <color name="Text" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <transparent use_class="true">true</transparent>
+      <wrap_words use_class="true">true</wrap_words>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_69</name>
+      <class>COMMENT</class>
+      <text>shift == 0</text>
+      <x>642</x>
+      <y>112</y>
+      <width>70</width>
+      <font use_class="true">
+        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
+        </font>
+      </font>
+      <foreground_color use_class="true">
+        <color name="Text" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <transparent use_class="true">true</transparent>
+      <wrap_words use_class="true">true</wrap_words>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_70</name>
+      <class>COMMENT</class>
+      <text>shift == 8</text>
+      <x>642</x>
+      <y>152</y>
+      <width>70</width>
+      <font use_class="true">
+        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
+        </font>
+      </font>
+      <foreground_color use_class="true">
+        <color name="Text" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <transparent use_class="true">true</transparent>
+      <wrap_words use_class="true">true</wrap_words>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_71</name>
+      <class>COMMENT</class>
+      <text>shift == 8</text>
+      <x>642</x>
+      <y>182</y>
+      <width>70</width>
+      <font use_class="true">
+        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
+        </font>
+      </font>
+      <foreground_color use_class="true">
+        <color name="Text" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <transparent use_class="true">true</transparent>
+      <wrap_words use_class="true">true</wrap_words>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_72</name>
+      <class>COMMENT</class>
+      <text>shift == 16</text>
+      <x>642</x>
+      <y>222</y>
+      <width>70</width>
+      <font use_class="true">
+        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
+        </font>
+      </font>
+      <foreground_color use_class="true">
+        <color name="Text" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <transparent use_class="true">true</transparent>
+      <wrap_words use_class="true">true</wrap_words>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_73</name>
+      <class>COMMENT</class>
+      <text>shift == 16</text>
+      <x>642</x>
+      <y>252</y>
+      <width>70</width>
+      <font use_class="true">
+        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
+        </font>
+      </font>
+      <foreground_color use_class="true">
+        <color name="Text" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <transparent use_class="true">true</transparent>
+      <wrap_words use_class="true">true</wrap_words>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_74</name>
+      <class>COMMENT</class>
+      <text>shift == 24</text>
+      <x>642</x>
+      <y>292</y>
+      <width>70</width>
+      <font use_class="true">
+        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
+        </font>
+      </font>
+      <foreground_color use_class="true">
+        <color name="Text" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <transparent use_class="true">true</transparent>
+      <wrap_words use_class="true">true</wrap_words>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_75</name>
+      <class>COMMENT</class>
+      <text>shift == 24</text>
+      <x>642</x>
+      <y>322</y>
+      <width>70</width>
+      <font use_class="true">
+        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
+        </font>
+      </font>
+      <foreground_color use_class="true">
+        <color name="Text" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <transparent use_class="true">true</transparent>
+      <wrap_words use_class="true">true</wrap_words>
+    </widget>
+    <widget type="label" version="2.0.0">
       <name>Label_20</name>
       <class>COMMENT</class>
       <text>mask == 0xFFFFFFFF</text>
@@ -410,560 +554,6 @@
       <pv_name>$(P)$(R)$(M)</pv_name>
       <x>352</x>
       <y>12</y>
-      <width>110</width>
-    </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>asynMaskShift Test $(NOTE)</name>
-    <x>680</x>
-    <width>760</width>
-    <height>380</height>
-    <font>
-      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-      </font>
-    </font>
-    <widget type="label" version="2.0.0">
-      <name>Label_49</name>
-      <text>$(M)Shift4</text>
-      <x>2</x>
-      <y>292</y>
-      <width>200</width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_50</name>
-      <text>$(M)Shift4_RBV</text>
-      <x>2</x>
-      <y>322</y>
-      <width>200</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_44</name>
-      <pv_name>$(P)$(R)$(M)Shift4</pv_name>
-      <x>212</x>
-      <y>292</y>
-      <width>110</width>
-      <format>4</format>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_45</name>
-      <pv_name>$(P)$(R)$(M)Shift4_RBV</pv_name>
-      <x>212</x>
-      <y>322</y>
-      <width>110</width>
-      <format>4</format>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_45</name>
-      <pv_name>$(P)$(R)$(M)Shift4</pv_name>
-      <x>352</x>
-      <y>292</y>
-      <width>110</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_46</name>
-      <pv_name>$(P)$(R)$(M)Shift4_RBV</pv_name>
-      <x>352</x>
-      <y>322</y>
-      <width>110</width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_51</name>
-      <class>COMMENT</class>
-      <text>mask == 0xFFFFFFFF</text>
-      <x>482</x>
-      <y>42</y>
-      <width>150</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_54</name>
-      <class>COMMENT</class>
-      <text>mask == 0x0000FF00</text>
-      <x>482</x>
-      <y>182</y>
-      <width>150</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_55</name>
-      <class>COMMENT</class>
-      <text>mask == 0x0000FF00</text>
-      <x>482</x>
-      <y>152</y>
-      <width>150</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_56</name>
-      <class>COMMENT</class>
-      <text>mask == 0x00FF0000</text>
-      <x>482</x>
-      <y>252</y>
-      <width>150</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_57</name>
-      <class>COMMENT</class>
-      <text>mask == 0x00FF0000</text>
-      <x>482</x>
-      <y>222</y>
-      <width>150</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_58</name>
-      <class>COMMENT</class>
-      <text>mask == 0xFF000000</text>
-      <x>482</x>
-      <y>322</y>
-      <width>150</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_59</name>
-      <class>COMMENT</class>
-      <text>mask == 0xFF000000</text>
-      <x>482</x>
-      <y>292</y>
-      <width>150</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_60</name>
-      <class>COMMENT</class>
-      <text>mask == 0x000000FF</text>
-      <x>482</x>
-      <y>82</y>
-      <width>150</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_61</name>
-      <class>COMMENT</class>
-      <text>mask == 0x000000FF</text>
-      <x>482</x>
-      <y>112</y>
-      <width>150</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_21</name>
-      <class>COMMENT</class>
-      <text>shift == 0</text>
-      <x>642</x>
-      <y>82</y>
-      <width>70</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_62</name>
-      <class>COMMENT</class>
-      <text>shift == 0</text>
-      <x>642</x>
-      <y>112</y>
-      <width>70</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_63</name>
-      <class>COMMENT</class>
-      <text>shift == 8</text>
-      <x>642</x>
-      <y>152</y>
-      <width>70</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_64</name>
-      <class>COMMENT</class>
-      <text>shift == 8</text>
-      <x>642</x>
-      <y>182</y>
-      <width>70</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_65</name>
-      <class>COMMENT</class>
-      <text>shift == 16</text>
-      <x>642</x>
-      <y>222</y>
-      <width>70</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_66</name>
-      <class>COMMENT</class>
-      <text>shift == 16</text>
-      <x>642</x>
-      <y>252</y>
-      <width>70</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_67</name>
-      <class>COMMENT</class>
-      <text>shift == 24</text>
-      <x>642</x>
-      <y>292</y>
-      <width>70</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_68</name>
-      <class>COMMENT</class>
-      <text>shift == 24</text>
-      <x>642</x>
-      <y>322</y>
-      <width>70</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_40</name>
-      <text>$(M)Shift</text>
-      <x>2</x>
-      <y>12</y>
-      <width>200</width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_41</name>
-      <text>$(M)Shift_RBV</text>
-      <x>2</x>
-      <y>42</y>
-      <width>200</width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_42</name>
-      <class>COMMENT</class>
-      <text>mask == 0xFFFFFFFF</text>
-      <x>482</x>
-      <y>12</y>
-      <width>150</width>
-      <font use_class="true">
-        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
-        </font>
-      </font>
-      <foreground_color use_class="true">
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <transparent use_class="true">true</transparent>
-      <wrap_words use_class="true">true</wrap_words>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_32</name>
-      <pv_name>$(P)$(R)$(M)Shift</pv_name>
-      <x>212</x>
-      <y>12</y>
-      <width>110</width>
-      <format>4</format>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_33</name>
-      <pv_name>$(P)$(R)$(M)Shift_RBV</pv_name>
-      <x>212</x>
-      <y>42</y>
-      <width>110</width>
-      <format>4</format>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_33</name>
-      <pv_name>$(P)$(R)$(M)Shift</pv_name>
-      <x>352</x>
-      <y>12</y>
-      <width>110</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_34</name>
-      <pv_name>$(P)$(R)$(M)Shift_RBV</pv_name>
-      <x>352</x>
-      <y>42</y>
-      <width>110</width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_43</name>
-      <text>$(M)Shift1</text>
-      <x>2</x>
-      <y>82</y>
-      <width>200</width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_44</name>
-      <text>$(M)Shift1_RBV</text>
-      <x>2</x>
-      <y>112</y>
-      <width>200</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_35</name>
-      <pv_name>$(P)$(R)$(M)Shift1</pv_name>
-      <x>212</x>
-      <y>82</y>
-      <width>110</width>
-      <format>4</format>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_36</name>
-      <pv_name>$(P)$(R)$(M)Shift1_RBV</pv_name>
-      <x>212</x>
-      <y>112</y>
-      <width>110</width>
-      <format>4</format>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_36</name>
-      <pv_name>$(P)$(R)$(M)Shift1</pv_name>
-      <x>352</x>
-      <y>82</y>
-      <width>110</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_37</name>
-      <pv_name>$(P)$(R)$(M)Shift1_RBV</pv_name>
-      <x>352</x>
-      <y>112</y>
-      <width>110</width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_45</name>
-      <text>$(M)Shift2</text>
-      <x>2</x>
-      <y>152</y>
-      <width>200</width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_46</name>
-      <text>$(M)Shift2_RBV</text>
-      <x>2</x>
-      <y>182</y>
-      <width>200</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_38</name>
-      <pv_name>$(P)$(R)$(M)Shift2</pv_name>
-      <x>212</x>
-      <y>152</y>
-      <width>110</width>
-      <format>4</format>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_39</name>
-      <pv_name>$(P)$(R)$(M)Shift2_RBV</pv_name>
-      <x>212</x>
-      <y>182</y>
-      <width>110</width>
-      <format>4</format>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_39</name>
-      <pv_name>$(P)$(R)$(M)Shift2</pv_name>
-      <x>352</x>
-      <y>152</y>
-      <width>110</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_40</name>
-      <pv_name>$(P)$(R)$(M)Shift2_RBV</pv_name>
-      <x>352</x>
-      <y>182</y>
-      <width>110</width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_47</name>
-      <text>$(M)Shift3</text>
-      <x>2</x>
-      <y>222</y>
-      <width>200</width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_48</name>
-      <text>$(M)Shift3_RBV</text>
-      <x>2</x>
-      <y>252</y>
-      <width>200</width>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_41</name>
-      <pv_name>$(P)$(R)$(M)Shift3</pv_name>
-      <x>212</x>
-      <y>222</y>
-      <width>110</width>
-      <format>4</format>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_42</name>
-      <pv_name>$(P)$(R)$(M)Shift3_RBV</pv_name>
-      <x>212</x>
-      <y>252</y>
-      <width>110</width>
-      <format>4</format>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry_42</name>
-      <pv_name>$(P)$(R)$(M)Shift3</pv_name>
-      <x>352</x>
-      <y>222</y>
-      <width>110</width>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_43</name>
-      <pv_name>$(P)$(R)$(M)Shift3_RBV</pv_name>
-      <x>352</x>
-      <y>252</y>
       <width>110</width>
     </widget>
   </widget>

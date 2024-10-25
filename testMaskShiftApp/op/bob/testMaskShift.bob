@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-10-17 17:10:28 by tford-->
+<!--Saved on 2024-10-24 18:08:52 by tford-->
 <display version="2.0.0">
   <name>testMaskShift</name>
   <macros>
@@ -33,7 +33,7 @@
     </macros>
     <file>_testMaskShiftLong.bob</file>
     <y>50</y>
-    <width>1740</width>
+    <width>1440</width>
     <height>380</height>
     <resize>2</resize>
   </widget>
@@ -45,7 +45,7 @@
     </macros>
     <file>_testMaskShiftLong.bob</file>
     <y>440</y>
-    <width>1740</width>
+    <width>1440</width>
     <height>380</height>
     <resize>2</resize>
   </widget>
@@ -57,7 +57,7 @@
     </macros>
     <file>_testMaskShiftBool.bob</file>
     <y>820</y>
-    <width>1740</width>
+    <width>830</width>
     <height>460</height>
     <resize>2</resize>
   </widget>
@@ -69,8 +69,58 @@
     </macros>
     <file>_testMaskShiftBool.bob</file>
     <y>1290</y>
-    <width>1740</width>
+    <width>830</width>
     <height>460</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_4</name>
+    <macros>
+      <M>TestMbb</M>
+      <NOTE>- using asyn:READBACK==0</NOTE>
+    </macros>
+    <file>_testMaskShiftMbb.bob</file>
+    <y>1760</y>
+    <width>830</width>
+    <height>460</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_5</name>
+    <macros>
+      <M>TestMbbCallback</M>
+      <NOTE>- using asyn:READBACK==1</NOTE>
+    </macros>
+    <file>_testMaskShiftMbb.bob</file>
+    <x>830</x>
+    <y>1760</y>
+    <width>830</width>
+    <height>460</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_6</name>
+    <macros>
+      <M>TestMbbdirect</M>
+      <NOTE>- using asyn:READBACK==0</NOTE>
+    </macros>
+    <file>_testMaskShiftMbbdirect.bob</file>
+    <y>2220</y>
+    <width>750</width>
+    <height>380</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_7</name>
+    <macros>
+      <M>TestMbbdirectCallback</M>
+      <NOTE>- using asyn:READBACK==1</NOTE>
+    </macros>
+    <file>_testMaskShiftMbbdirect.bob</file>
+    <x>750</x>
+    <y>2220</y>
+    <width>750</width>
+    <height>380</height>
     <resize>2</resize>
   </widget>
 </display>

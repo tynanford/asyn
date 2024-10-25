@@ -33,6 +33,18 @@
 #define P_ShiftBoolCallbackRBVString       "TEST_CALLBACK_BOOL_SHIFT_RBV"       /* asynUInt32Digital,    r/o */
 #define P_ShiftBoolCallbackString          "TEST_CALLBACK_BOOL_SHIFT"           /* asynUInt32Digital,    r/w */
 
+#define P_MbbRBVString            "TEST_MBB_RBV"             /* asynUInt32Digital,    r/o */
+#define P_MbbString               "TEST_MBB"                 /* asynUInt32Digital,    r/w */
+
+#define P_MbbCallbackRBVString            "TEST_CALLBACK_MBB_RBV"             /* asynUInt32Digital,    r/o */
+#define P_MbbCallbackString               "TEST_CALLBACK_MBB"                 /* asynUInt32Digital,    r/w */
+
+#define P_MbbdirectRBVString            "TEST_MBBDIRECT_RBV"             /* asynUInt32Digital,    r/o */
+#define P_MbbdirectString               "TEST_MBBDIRECT"                 /* asynUInt32Digital,    r/w */
+
+#define P_MbbdirectCallbackRBVString            "TEST_CALLBACK_MBBDIRECT_RBV"             /* asynUInt32Digital,    r/o */
+#define P_MbbdirectCallbackString               "TEST_CALLBACK_MBBDIRECT"                 /* asynUInt32Digital,    r/w */
+
 /** Class that demonstrates the use of the asynPortDriver base class to greatly simplify the task
   * of writing an asyn port driver.
   * This class does a simple simulation of a digital oscilloscope.  It computes a waveform, computes
@@ -67,6 +79,18 @@ protected:
     int P_BoolCallbackRBV;
     int P_ShiftBoolCallback;
     int P_ShiftBoolCallbackRBV;
+
+    int P_Mbb;
+    int P_MbbRBV;
+
+    int P_MbbCallback;
+    int P_MbbCallbackRBV;
+
+    int P_Mbbdirect;
+    int P_MbbdirectRBV;
+
+    int P_MbbdirectCallback;
+    int P_MbbdirectCallbackRBV;
 
 private:
 };

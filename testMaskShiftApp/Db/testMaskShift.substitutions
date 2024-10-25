@@ -9,3 +9,18 @@ file "testMaskShift_bool.template" {
   { "\$(P)", "\$(R)",   "TestBool",             "TEST_BOOL",            "0" }
   { "\$(P)", "\$(R)",   "TestBoolCallback",     "TEST_CALLBACK_BOOL",   "1" }
 }
+
+# mbbi/mbbo
+file "testMaskShift_mbb.template" {
+  pattern { P,     R,    M                      A,                      ASYN_READBACK }
+  { "\$(P)", "\$(R)",   "TestMbb",             "TEST_MBB",            "0" }
+  { "\$(P)", "\$(R)",   "TestMbbCallback",     "TEST_CALLBACK_MBB",   "1" }
+}
+
+
+# mbbiDirect/mbboDirect
+file "testMaskShift_mbbdirect.template" {
+  pattern { P,     R,    M                      A,                      ASYN_READBACK }
+  { "\$(P)", "\$(R)",   "TestMbbdirect",             "TEST_MBBDIRECT",            "0" }
+  { "\$(P)", "\$(R)",   "TestMbbdirectCallback",     "TEST_CALLBACK_MBBDIRECT",   "1" }
+}

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-10-17 17:11:21 by tford-->
+<!--Saved on 2024-10-18 16:21:42 by tford-->
 <display version="2.0.0">
   <name>_testMaskShift</name>
-  <width>1740</width>
+  <width>830</width>
   <height>460</height>
   <widget type="group" version="3.0.0">
     <name>asynMaskShift Test $(NOTE)</name>
     <x>830</x>
     <width>910</width>
     <height>460</height>
+    <visible>false</visible>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
       </font>

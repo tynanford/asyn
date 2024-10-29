@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-10-24 18:08:52 by tford-->
+<!--Saved on 2024-10-28 17:22:44 by tford-->
 <display version="2.0.0">
   <name>testMaskShift</name>
   <macros>
     <P>testSM:</P>
     <R>1:</R>
   </macros>
-  <width>1400</width>
+  <width>1700</width>
+  <height>2200</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
@@ -29,7 +30,7 @@
     <name>Embedded Display</name>
     <macros>
       <M>TestLong</M>
-      <NOTE>- with asyn:READBACK==0</NOTE>
+      <NOTE>- Long records with asyn:READBACK==0</NOTE>
     </macros>
     <file>_testMaskShiftLong.bob</file>
     <y>50</y>
@@ -41,7 +42,7 @@
     <name>Embedded Display_1</name>
     <macros>
       <M>TestLongCallback</M>
-      <NOTE>- using asyn:READBACK==1</NOTE>
+      <NOTE>- Long records using asyn:READBACK==1</NOTE>
     </macros>
     <file>_testMaskShiftLong.bob</file>
     <y>440</y>
@@ -53,10 +54,10 @@
     <name>Embedded Display_2</name>
     <macros>
       <M>TestBool</M>
-      <NOTE>- with asyn:READBACK==0</NOTE>
+      <NOTE>- Binary record with asyn:READBACK==0</NOTE>
     </macros>
     <file>_testMaskShiftBool.bob</file>
-    <y>820</y>
+    <y>880</y>
     <width>830</width>
     <height>460</height>
     <resize>2</resize>
@@ -65,10 +66,11 @@
     <name>Embedded Display_3</name>
     <macros>
       <M>TestBoolCallback</M>
-      <NOTE>- using asyn:READBACK==1</NOTE>
+      <NOTE>- Binary record using asyn:READBACK==1</NOTE>
     </macros>
     <file>_testMaskShiftBool.bob</file>
-    <y>1290</y>
+    <x>840</x>
+    <y>880</y>
     <width>830</width>
     <height>460</height>
     <resize>2</resize>
@@ -77,10 +79,10 @@
     <name>Embedded Display_4</name>
     <macros>
       <M>TestMbb</M>
-      <NOTE>- using asyn:READBACK==0</NOTE>
+      <NOTE>- Multi-Bit Binary using asyn:READBACK==0</NOTE>
     </macros>
     <file>_testMaskShiftMbb.bob</file>
-    <y>1760</y>
+    <y>1340</y>
     <width>830</width>
     <height>460</height>
     <resize>2</resize>
@@ -89,11 +91,11 @@
     <name>Embedded Display_5</name>
     <macros>
       <M>TestMbbCallback</M>
-      <NOTE>- using asyn:READBACK==1</NOTE>
+      <NOTE>- Multi-Bit Binary using asyn:READBACK==1</NOTE>
     </macros>
     <file>_testMaskShiftMbb.bob</file>
     <x>830</x>
-    <y>1760</y>
+    <y>1340</y>
     <width>830</width>
     <height>460</height>
     <resize>2</resize>
@@ -102,10 +104,10 @@
     <name>Embedded Display_6</name>
     <macros>
       <M>TestMbbdirect</M>
-      <NOTE>- using asyn:READBACK==0</NOTE>
+      <NOTE>- Multi-Bit Binary Direct using asyn:READBACK==0</NOTE>
     </macros>
     <file>_testMaskShiftMbbdirect.bob</file>
-    <y>2220</y>
+    <y>1800</y>
     <width>750</width>
     <height>380</height>
     <resize>2</resize>
@@ -114,13 +116,24 @@
     <name>Embedded Display_7</name>
     <macros>
       <M>TestMbbdirectCallback</M>
-      <NOTE>- using asyn:READBACK==1</NOTE>
+      <NOTE>- Multi-Bit Binary Direct using asyn:READBACK==1</NOTE>
     </macros>
     <file>_testMaskShiftMbbdirect.bob</file>
     <x>750</x>
-    <y>2220</y>
+    <y>1800</y>
     <width>750</width>
     <height>380</height>
     <resize>2</resize>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>All below uses asynMask like before. It is just to show the current behavior and why asynMaskShift isn't required for these cases</text>
+    <y>840</y>
+    <width>1430</width>
+    <height>30</height>
+    <font>
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
   </widget>
 </display>

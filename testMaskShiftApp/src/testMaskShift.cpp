@@ -28,6 +28,7 @@
 static const char *driverName="testMaskShift";
 void simTask(void *drvPvt);
 
+#define DEFAULT_MASK 0xFFFFFFFF
 
 /** Constructor for the testMaskShift class.
   * Calls constructor for the asynPortDriver base class.
@@ -46,42 +47,38 @@ testMaskShift::testMaskShift(const char *portName)
     int i;
     const char *functionName = "testMaskShift";
 
-    createParam(P_LongString,          asynParamUInt32Digital,       &P_Long);
-    createParam(P_LongRBVString,       asynParamUInt32Digital,       &P_LongRBV);
-    createParam(P_ShiftLongString,     asynParamUInt32Digital,       &P_ShiftLong);
-    createParam(P_ShiftLongRBVString,  asynParamUInt32Digital,       &P_ShiftLongRBV);
+    createParam(P_LongString,                   asynParamUInt32Digital,       &P_Long);
+    createParam(P_LongRBVString,                asynParamUInt32Digital,       &P_LongRBV);
+    createParam(P_ShiftLongString,              asynParamUInt32Digital,       &P_ShiftLong);
+    createParam(P_ShiftLongRBVString,           asynParamUInt32Digital,       &P_ShiftLongRBV);
 
-    createParam(P_LongCallbackString,          asynParamUInt32Digital,       &P_LongCallback);
-    createParam(P_LongCallbackRBVString,       asynParamUInt32Digital,       &P_LongCallbackRBV);
-    createParam(P_ShiftLongCallbackString,     asynParamUInt32Digital,       &P_ShiftLongCallback);
-    createParam(P_ShiftLongCallbackRBVString,  asynParamUInt32Digital,       &P_ShiftLongCallbackRBV);
+    createParam(P_LongCallbackString,           asynParamUInt32Digital,       &P_LongCallback);
+    createParam(P_LongCallbackRBVString,        asynParamUInt32Digital,       &P_LongCallbackRBV);
+    createParam(P_ShiftLongCallbackString,      asynParamUInt32Digital,       &P_ShiftLongCallback);
+    createParam(P_ShiftLongCallbackRBVString,   asynParamUInt32Digital,       &P_ShiftLongCallbackRBV);
 
-    createParam(P_BoolString,          asynParamUInt32Digital,       &P_Bool);
-    createParam(P_BoolRBVString,       asynParamUInt32Digital,       &P_BoolRBV);
-    createParam(P_ShiftBoolString,     asynParamUInt32Digital,       &P_ShiftBool);
-    createParam(P_ShiftBoolRBVString,  asynParamUInt32Digital,       &P_ShiftBoolRBV);
+    createParam(P_BoolString,                   asynParamUInt32Digital,       &P_Bool);
+    createParam(P_BoolRBVString,                asynParamUInt32Digital,       &P_BoolRBV);
+    createParam(P_ShiftBoolString,              asynParamUInt32Digital,       &P_ShiftBool);
+    createParam(P_ShiftBoolRBVString,           asynParamUInt32Digital,       &P_ShiftBoolRBV);
 
-    createParam(P_BoolCallbackString,          asynParamUInt32Digital,       &P_BoolCallback);
-    createParam(P_BoolCallbackRBVString,       asynParamUInt32Digital,       &P_BoolCallbackRBV);
-    createParam(P_ShiftBoolCallbackString,     asynParamUInt32Digital,       &P_ShiftBoolCallback);
-    createParam(P_ShiftBoolCallbackRBVString,  asynParamUInt32Digital,       &P_ShiftBoolCallbackRBV);
+    createParam(P_BoolCallbackString,           asynParamUInt32Digital,       &P_BoolCallback);
+    createParam(P_BoolCallbackRBVString,        asynParamUInt32Digital,       &P_BoolCallbackRBV);
+    createParam(P_ShiftBoolCallbackString,      asynParamUInt32Digital,       &P_ShiftBoolCallback);
+    createParam(P_ShiftBoolCallbackRBVString,   asynParamUInt32Digital,       &P_ShiftBoolCallbackRBV);
 
-    createParam(P_MbbString,          asynParamUInt32Digital,       &P_Mbb);
-    createParam(P_MbbRBVString,       asynParamUInt32Digital,       &P_MbbRBV);
+    createParam(P_MbbString,                    asynParamUInt32Digital,       &P_Mbb);
+    createParam(P_MbbRBVString,                 asynParamUInt32Digital,       &P_MbbRBV);
 
-    createParam(P_MbbCallbackString,          asynParamUInt32Digital,       &P_MbbCallback);
-    createParam(P_MbbCallbackRBVString,       asynParamUInt32Digital,       &P_MbbCallbackRBV);
+    createParam(P_MbbCallbackString,            asynParamUInt32Digital,       &P_MbbCallback);
+    createParam(P_MbbCallbackRBVString,         asynParamUInt32Digital,       &P_MbbCallbackRBV);
 
-    createParam(P_MbbdirectString,          asynParamUInt32Digital,       &P_Mbbdirect);
-    createParam(P_MbbdirectRBVString,       asynParamUInt32Digital,       &P_MbbdirectRBV);
+    createParam(P_MbbdirectString,              asynParamUInt32Digital,       &P_Mbbdirect);
+    createParam(P_MbbdirectRBVString,           asynParamUInt32Digital,       &P_MbbdirectRBV);
 
-    createParam(P_MbbdirectCallbackString,          asynParamUInt32Digital,       &P_MbbdirectCallback);
-    createParam(P_MbbdirectCallbackRBVString,       asynParamUInt32Digital,       &P_MbbdirectCallbackRBV);
+    createParam(P_MbbdirectCallbackString,      asynParamUInt32Digital,       &P_MbbdirectCallback);
+    createParam(P_MbbdirectCallbackRBVString,   asynParamUInt32Digital,       &P_MbbdirectCallbackRBV);
 
-
-    /* Set the initial values of some parameters */
-    setUIntDigitalParam(P_Long, 0, 0xFFFFFFFF);
-    setUIntDigitalParam(P_ShiftLong, 0, 0xFFFFFFFF);
 
     /* Create the thread that computes the waveforms in the background */
     status = (asynStatus)(epicsThreadCreate("testMaskShiftTask",
@@ -107,21 +104,13 @@ void testMaskShift::simTask(void)
     /* This thread computes the waveform and does callbacks with it */
     const char* functionName = "simTask";
 
-    epicsUInt32 longValue = 1;
-    epicsUInt32 shiftLongValue = 1;
-    epicsUInt32 longCallbackValue = 1;
-    epicsUInt32 shiftLongCallbackValue = 1;
+    epicsUInt32 longValue, shiftLongValue, longCallbackValue, shiftLongCallbackValue;
 
-    epicsUInt32 boolValue = 1;
-    epicsUInt32 shiftBoolValue = 1;
-    epicsUInt32 boolCallbackValue = 1;
-    epicsUInt32 shiftBoolCallbackValue = 1;
+    epicsUInt32 boolValue, shiftBoolValue, boolCallbackValue, shiftBoolCallbackValue;
 
-    epicsUInt32 mbbValue = 1;
-    epicsUInt32 mbbCallbackValue = 1;
+    epicsUInt32 mbbValue, mbbCallbackValue;
 
-    epicsUInt32 mbbdirectValue = 1;
-    epicsUInt32 mbbdirectCallbackValue = 1;
+    epicsUInt32 mbbdirectValue, mbbdirectCallbackValue;
 
     /*
      * Loop forever, sleeping for 3 seconds after each iteration.
@@ -132,37 +121,37 @@ void testMaskShift::simTask(void)
      */
     while (1) {
         lock();
-        getUIntDigitalParam(P_Long, &longValue, 0xFFFFFFFF);
-        setUIntDigitalParam(P_LongRBV, longValue, 0xFFFFFFFF);
-        getUIntDigitalParam(P_ShiftLong, &shiftLongValue, 0xFFFFFFFF);
-        setUIntDigitalParam(P_ShiftLongRBV, shiftLongValue, 0xFFFFFFFF);
+        getUIntDigitalParam(P_Long, &longValue, DEFAULT_MASK);
+        setUIntDigitalParam(P_LongRBV, longValue, DEFAULT_MASK);
+        getUIntDigitalParam(P_ShiftLong, &shiftLongValue, DEFAULT_MASK);
+        setUIntDigitalParam(P_ShiftLongRBV, shiftLongValue, DEFAULT_MASK);
 
-        getUIntDigitalParam(P_LongCallback, &longCallbackValue, 0xFFFFFFFF);
-        setUIntDigitalParam(P_LongCallbackRBV, longCallbackValue, 0xFFFFFFFF);
-        getUIntDigitalParam(P_ShiftLongCallback, &shiftLongCallbackValue, 0xFFFFFFFF);
-        setUIntDigitalParam(P_ShiftLongCallbackRBV, shiftLongCallbackValue, 0xFFFFFFFF);
+        getUIntDigitalParam(P_LongCallback, &longCallbackValue, DEFAULT_MASK);
+        setUIntDigitalParam(P_LongCallbackRBV, longCallbackValue, DEFAULT_MASK);
+        getUIntDigitalParam(P_ShiftLongCallback, &shiftLongCallbackValue, DEFAULT_MASK);
+        setUIntDigitalParam(P_ShiftLongCallbackRBV, shiftLongCallbackValue, DEFAULT_MASK);
 
-        getUIntDigitalParam(P_Bool, &boolValue, 0xFFFFFFFF);
-        setUIntDigitalParam(P_BoolRBV, boolValue, 0xFFFFFFFF);
-        getUIntDigitalParam(P_ShiftBool, &shiftBoolValue, 0xFFFFFFFF);
-        setUIntDigitalParam(P_ShiftBoolRBV, shiftBoolValue, 0xFFFFFFFF);
+        getUIntDigitalParam(P_Bool, &boolValue, DEFAULT_MASK);
+        setUIntDigitalParam(P_BoolRBV, boolValue, DEFAULT_MASK);
+        getUIntDigitalParam(P_ShiftBool, &shiftBoolValue, DEFAULT_MASK);
+        setUIntDigitalParam(P_ShiftBoolRBV, shiftBoolValue, DEFAULT_MASK);
 
-        getUIntDigitalParam(P_BoolCallback, &boolCallbackValue, 0xFFFFFFFF);
-        setUIntDigitalParam(P_BoolCallbackRBV, boolCallbackValue, 0xFFFFFFFF);
-        getUIntDigitalParam(P_ShiftBoolCallback, &shiftBoolCallbackValue, 0xFFFFFFFF);
-        setUIntDigitalParam(P_ShiftBoolCallbackRBV, shiftBoolCallbackValue, 0xFFFFFFFF);
+        getUIntDigitalParam(P_BoolCallback, &boolCallbackValue, DEFAULT_MASK);
+        setUIntDigitalParam(P_BoolCallbackRBV, boolCallbackValue, DEFAULT_MASK);
+        getUIntDigitalParam(P_ShiftBoolCallback, &shiftBoolCallbackValue, DEFAULT_MASK);
+        setUIntDigitalParam(P_ShiftBoolCallbackRBV, shiftBoolCallbackValue, DEFAULT_MASK);
 
-        getUIntDigitalParam(P_Mbb, &mbbValue, 0xFFFFFFFF);
-        setUIntDigitalParam(P_MbbRBV, mbbValue, 0xFFFFFFFF);
+        getUIntDigitalParam(P_Mbb, &mbbValue, DEFAULT_MASK);
+        setUIntDigitalParam(P_MbbRBV, mbbValue, DEFAULT_MASK);
 
-        getUIntDigitalParam(P_MbbCallback, &mbbCallbackValue, 0xFFFFFFFF);
-        setUIntDigitalParam(P_MbbCallbackRBV, mbbCallbackValue, 0xFFFFFFFF);
+        getUIntDigitalParam(P_MbbCallback, &mbbCallbackValue, DEFAULT_MASK);
+        setUIntDigitalParam(P_MbbCallbackRBV, mbbCallbackValue, DEFAULT_MASK);
 
-        getUIntDigitalParam(P_Mbbdirect, &mbbdirectValue, 0xFFFFFFFF);
-        setUIntDigitalParam(P_MbbdirectRBV, mbbdirectValue, 0xFFFFFFFF);
+        getUIntDigitalParam(P_Mbbdirect, &mbbdirectValue, DEFAULT_MASK);
+        setUIntDigitalParam(P_MbbdirectRBV, mbbdirectValue, DEFAULT_MASK);
 
-        getUIntDigitalParam(P_MbbdirectCallback, &mbbdirectCallbackValue, 0xFFFFFFFF);
-        setUIntDigitalParam(P_MbbdirectCallbackRBV, mbbdirectCallbackValue, 0xFFFFFFFF);
+        getUIntDigitalParam(P_MbbdirectCallback, &mbbdirectCallbackValue, DEFAULT_MASK);
+        setUIntDigitalParam(P_MbbdirectCallbackRBV, mbbdirectCallbackValue, DEFAULT_MASK);
 
         callParamCallbacks();
         unlock();

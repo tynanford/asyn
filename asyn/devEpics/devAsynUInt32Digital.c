@@ -840,6 +840,7 @@ static long processLo(longoutRecord *pr)
     if(pPvt->newOutputCallbackValue && getCallbackValue(pPvt)) {
         /* We got a callback from the driver */
         if (pPvt->result.status == asynSuccess) {
+            /* since this is a callback, mask and then right shift */
             pr->val = (pPvt->result.value & pPvt->mask) >> pPvt->shift;
         }
     } else if(pr->pact == 0) {

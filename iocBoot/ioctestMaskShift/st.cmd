@@ -1,5 +1,4 @@
 #!../../bin/linux-x86_64/testMaskShift
-##!../../bin/linux-x86_64-debug/testMaskShift
 
 < envPaths
 
@@ -14,5 +13,6 @@ testMaskShiftConfigure("testSM")
 dbLoadRecords("../../db/testMaskShift.db","P=testSM:,R=1:,PORT=testSM,ADDR=0,TIMEOUT=1")
 dbLoadRecords("../../db/asynRecord.db","P=testSM:,R=asyn1,PORT=testSM,ADDR=0,OMAX=80,IMAX=80")
 #asynSetTraceMask("testSM",0,0xff)
-asynSetTraceIOMask("testSM",0,0x2)
+#asynSetTraceIOMask("testSM",0,0x2)
+
 iocInit()
